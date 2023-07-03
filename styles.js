@@ -37,7 +37,7 @@ async function redirectToAuthCodeFlow(clientId) {
     const params = new URLSearchParams();
     params.append("client_id", clientId);
     params.append("response_type", "code");
-    params.append("redirect_uri", "http://localhost:5173/index.html||https://vinfinity7.github.io/Spotify/");
+    params.append("redirect_uri", "http://localhost:5173/||https://vinfinity7.github.io/Spotify/");
     params.append("scope", "user-read-private user-read-email user-read-playback-state user-top-read playlist-read-private user-read-recently-played");
     params.append("code_challenge_method", "S256");
     params.append("code_challenge", challenge);
@@ -72,7 +72,7 @@ async function getAccessToken(clientId, code) {
     params.append("client_id", clientId);
     params.append("grant_type", "authorization_code");
     params.append("code", code);
-    params.append("redirect_uri", "http://localhost:5173/index.html||https://vinfinity7.github.io/Spotify/");
+    params.append("redirect_uri", "http://localhost:5173/||https://vinfinity7.github.io/Spotify/");
     params.append("code_verifier", verifier);
 
     const result = await fetch("https://accounts.spotify.com/api/token", {
