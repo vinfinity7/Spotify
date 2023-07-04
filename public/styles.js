@@ -123,7 +123,7 @@ function populateUI(profile) {
     <figure class="snip1336">
     <img src="${profile.images[0].url}" class="samp" />
     <figcaption>
-    <img src="public\spotify-logo.png" alt="profile-sample4" class="profile" />
+  
     <h2><span>logged in as</span>${profile.display_name}</h2>
     <p>Email id is used as ${profile.email} </p>
     <a href="${profile.external_urls.spotify}" class="follow">SPOTIFY</a>
